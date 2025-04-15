@@ -1,0 +1,51 @@
+
+body{
+    text-align:center;
+    item-align: center;
+}
+.form-container {
+    margin: auto; /* Mengatur margin otomatis */
+    width: 300px; /* Lebar formulir */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.form-container input {
+    width: 100%; /* Adjusted to fit the container */
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.form-container button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.form-container button:hover {
+    background-color: #45a049;
+}
+
+.form-container h1 {
+    margin-bottom: 20px; 
+    item-align: center;
+}
+
+h1 {
+    font-size: 20px;
+    text-align: center; /* Removed invalid `pointer:` property */
+}
+.welcome-message {
+    font-size: 84px;
