@@ -1,19 +1,104 @@
 <!DOCTYPE html>
 <html>
-    <head>   
-        <title>NAWASENA</title>
-        <link rel="stylesheet" href="nwsn.css">
-        <body>
-            <h1 class="welcome-message">Selamat Datang</h1>
-            <p class='welcome-message'>di situs resmi nawasena</p>
-    
-    
-    <div class="form-container">        
-    <input type="text" placeholder="Masukkan nama">
-        <input type="password" placeholder="nisn" required>
-        <button type="submit">Masuk</button>
-    </form>
+<head>
+    <title>Form Glowing Button</title>
+    <style>
+        html, body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #000000; /* Latar belakang hitam */
+            height: 100vh;
+            margin: 0;
+        }
+        h1 {
+            color: #FFFFFF; /* Warna teks putih */
+            margin-bottom: 20px; /* Jarak dengan formulir */
+        }
+        .form-container {
+            background-color: #161616;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            width: 300px; /* Lebar form */
+        }
+        input {
+            display: block;
+            width: 100%;
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #333;
+            border-radius: 5px;
+            background-color: #262626; /* Warna input */
+            color: #FFF; /* Warna teks */
+        }
+        input::placeholder {
+            color: #888; /* Warna placeholder */
+        }
+        .btn {
+            padding: 15px 40px;
+            border: none;
+            outline: none;
+            color: #FFF;
+            cursor: pointer;
+            position: relative;
+            z-index: 0;
+            border-radius: 12px;
+            background-color: #333;
+        }
+        .btn::after {
+            content: "";
+            z-index: -1;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: #333;
+            left: 0;
+            top: 0;
+            border-radius: 12px;
+        }
+        .btn::before {
+            content: "";
+            background: linear-gradient(
+                45deg,
+                #FF0000, #FF7300, #FFFB00, #48FF00,
+                #00FFD5, #002BFF, #FF00C8, #FF0000
+            );
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            background-size: 600%;
+            z-index: -1;
+            width: calc(100% + 4px);
+            height: calc(100% + 4px);
+            filter: blur(8px);
+            animation: glowing 20s linear infinite;
+            transition: opacity .3s ease-in-out;
+            border-radius: 12px;
+            opacity: 0;
+        }
+        .btn:hover::before {
+            opacity: 1;
+        }
+        .btn:active {
+            color: #000;
+            font-weight: bold;
+        }
+        @keyframes glowing {
+            0% { background-position: 0 0; }
+            50% { background-position: 400% 0; }
+            100% { background-position: 0 0; }
+        }
+    </style>
+</head>
+<body>
+    <h1>Selamat Datang</h1>
+    <div class="form-container">
+        <input type="text" placeholder="Masukkan nama">
+        <input type="password" placeholder="NISN" required>
+        <button class="btn">Masuk</button>
     </div>
-        </body>
-    </head>
+</body>
 </html>
