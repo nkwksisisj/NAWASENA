@@ -1,21 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
-    <script>alert('Anda telah diretas!');</script>
+    <script>
+        function handleLogin() {
+            // Ambil nilai input nama dan NISN
+            var nama = document.querySelector('input[type="text"]').value;
+            var nisn = document.querySelector('input[type="password"]').value;
+
+            // Validasi jika kedua input tidak kosong
+            if (nama === "" || nisn === "") {
+                alert("Nama dan NISN tidak boleh kosong!");
+            } else {
+                // Jika validasi berhasil, tampilkan pesan
+                alert("Selamat datang, " + nama + "!");
+            }
+        }
+    </script>
     <title>Form Glowing Button</title>
     <style>
+        /* CSS seperti sebelumnya */
         html, body {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            background-color: #000000; /* Latar belakang hitam */
+            background-color: #000000;
             height: 100vh;
             margin: 0;
         }
         h1 {
-            color: #FFFFFF; /* Warna teks putih */
-            margin-bottom: 20px; /* Jarak dengan formulir */
+            color: #FFFFFF;
+            margin-bottom: 20px;
         }
         .form-container {
             background-color: #161616;
@@ -23,7 +38,7 @@
             border-radius: 12px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
             text-align: center;
-            width: 300px; /* Lebar form */
+            width: 300px;
         }
         input {
             display: block;
@@ -32,11 +47,11 @@
             padding: 10px;
             border: 1px solid #333;
             border-radius: 5px;
-            background-color: #262626; /* Warna input */
-            color: #FFF; /* Warna teks */
+            background-color: #262626;
+            color: #FFF;
         }
         input::placeholder {
-            color: #888; /* Warna placeholder */
+            color: #888;
         }
         .btn {
             padding: 15px 40px;
@@ -62,11 +77,7 @@
         }
         .btn::before {
             content: "";
-            background: linear-gradient(
-                45deg,
-                #FF0000, #FF7300, #FFFB00, #48FF00,
-                #00FFD5, #002BFF, #FF00C8, #FF0000
-            );
+            background: linear-gradient(45deg, #FF0000, #FF7300, #FFFB00, #48FF00, #00FFD5, #002BFF, #FF00C8, #FF0000);
             position: absolute;
             top: -2px;
             left: -2px;
@@ -99,7 +110,7 @@
     <div class="form-container">
         <input type="text" placeholder="Masukkan nama">
         <input type="password" placeholder="NISN" required>
-        <button class="btn">Masuk</button>
+        <button class="btn" onclick="handleLogin()">Masuk</button>
     </div>
 </body>
 </html>
