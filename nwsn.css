@@ -47,5 +47,9 @@ h1 {
     font-size: 20px;
     text-align: center; /* Removed invalid `pointer:` property */
 }
+h2 {
+    font-size: 5px;
+    text-align: center;
+}
 .welcome-message {
     font-size: 84px;
